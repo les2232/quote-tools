@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://les2232.github.io/quote-tools/sitemap.xml
