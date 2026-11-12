@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free house cleaning quote calculator | Quote Tools Studio</title><meta name="description" content="Price a house cleaning job from your real costs and target margin, then send the customer a clean, printable quote. Free, no sign-up.">
+<link rel="canonical" href="https://les2232.github.io/quote-tools/cleaning/"><link rel="stylesheet" href="../style.css">
+</head><body>
+<header class="top"><a class="brand" href="../index.html">Quote Tools Studio</a><nav><a href="../cleaning/index.html">House cleaning</a><a href="../pressure-washing/index.html">Pressure washing</a><a href="../lawn-care/index.html">Lawn care</a></nav></header>
+<main>
+<h1>Free house cleaning quote calculator</h1>
+<p class="lede">Price a house cleaning job from your real costs and target margin, then send the customer a clean, printable quote. Free, no sign-up.</p>
+<div class="grid">
+  <section class="card" id="calc"><h2>1. Your costs for this job</h2>
+    <div class="row"><div><label for="crew">Cleaners</label><input id="crew" type="number" inputmode="decimal" min="0" step="1" value="2" data-err="Cleaners: a whole number, at least 1."></div><div><label for="hours">Hours each</label><input id="hours" type="number" inputmode="decimal" min="0" step="any" value="3" data-err="Hours each: more than 0."></div></div>
+    <div class="row"><div><label for="rate">Labor cost per hour</label><input id="rate" type="number" inputmode="decimal" min="0" step="any" value="20" data-err="Labor cost per hour: 0 or more."></div><div><label for="travel">Travel cost</label><input id="travel" type="number" inputmode="decimal" min="0" step="any" value="12" data-err="Travel cost: 0 or more."></div></div>
+    <div class="row"><div><label for="supplies">Supplies per job</label><input id="supplies" type="number" inputmode="decimal" min="0" step="any" value="8" data-err="Supplies: 0 or more."></div><div><label for="overhead">Overhead share (insurance, software, wear)</label><input id="overhead" type="number" inputmode="decimal" min="0" step="any" value="10" data-err="Overhead: 0 or more."></div></div>
+    <div class="row"><div><label for="margin">Target profit margin (%)</label><input id="margin" type="number" inputmode="decimal" min="0" step="any" value="30" data-err="Margin: from 0 to under 100%."></div>
+      <div><label for="round">Round the price up to</label><select id="round"><option value="0">exact cents</option><option value="1">nearest $1</option><option value="5" selected>nearest $5</option><option value="10">nearest $10</option></select></div></div>
+  </section>
+  <section class="card"><h2>2. Your price</h2><div id="result"></div>
+    <div class="card upsell"><p style="margin:0 0 10px">Pricing every job by hand? The Excel version saves your costs, checks bad inputs and shows profit per job.</p><a class="btn" href="https://payhip.com/b/XNo6O">Get the Excel calculator ($9)</a></div>
+  </section>
+</div>
+<section class="card" style="margin-top:20px" id="quote-form"><h2>3. Send the customer a quote</h2>
+  <div class="row"><div><label for="biz">Your business name</label><input id="biz" placeholder="Bright Home Cleaning"></div><div><label for="contact">Your phone or email (optional)</label><input id="contact"></div></div>
+  <div class="row"><div><label for="customer">Customer name</label><input id="customer"></div><div><label for="jobdesc">Job</label><input id="jobdesc" placeholder="Standard clean, 3 bed / 2 bath"></div></div>
+  <div class="quote-card" aria-label="Printable quote">
+    <div class="qhead"><div><div class="qbiz" id="q-biz"></div><div class="small" id="q-contact"></div></div><div class="small">Quote · <span id="q-date"></span></div></div>
+    <p>Prepared for <strong id="q-customer"></strong></p>
+    <p><span id="q-job"></span></p>
+    <p class="qprice">Total: <span id="q-price"></span></p>
+    <p class="small">This quote is valid for 30 days. Price covers the work described above.</p>
+    <p class="small">Quote made with the free calculator at les2232.github.io/quote-tools/</p>
+  </div>
+  <p style="margin-top:14px"><button id="print" type="button">Print or save as PDF</button></p>
+</section>
+<section class="guide"><h2 style="margin-top:0">How to price a house cleaning job</h2>
+<h2>Start from cost, not from a competitor's price</h2><p>Add up what the job really costs you: every cleaner's hours times what you pay per hour (include your own time and employer costs), travel, supplies, and a fair share of overhead like insurance and software. That total is your floor. Any price below it loses money.</p>
+<h2>Margin is not markup</h2><p>A 30% margin means 30% of the price is profit. That needs a price of cost divided by 0.70, not cost times 1.30. The calculator does this for you, which is why its number is higher than a simple markup.</p>
+<h2>Recurring clients</h2><p>Weekly and biweekly homes usually take fewer hours after the first deep clean. Lower the hours for repeat visits instead of cutting your margin.</p>
+</section>
+<script src="../app.js"></script></main>
+<footer class="site"><span>Free tools for small service businesses. Your numbers stay in your browser; nothing is sent or stored on a server.</span><span>Example defaults are not market rates. Use your own costs.</span></footer>
+</body></html>

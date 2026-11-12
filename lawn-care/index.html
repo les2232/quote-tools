@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free lawn mowing and lawn care quote calculator | Quote Tools Studio</title><meta name="description" content="Price mowing and yard jobs from your crew time, fuel and overhead, and print a quote for the customer. Free, no sign-up.">
+<link rel="canonical" href="https://les2232.github.io/quote-tools/lawn-care/"><link rel="stylesheet" href="../style.css">
+</head><body>
+<header class="top"><a class="brand" href="../index.html">Quote Tools Studio</a><nav><a href="../cleaning/index.html">House cleaning</a><a href="../pressure-washing/index.html">Pressure washing</a><a href="../lawn-care/index.html">Lawn care</a></nav></header>
+<main>
+<h1>Free lawn mowing and lawn care quote calculator</h1>
+<p class="lede">Price mowing and yard jobs from your crew time, fuel and overhead, and print a quote for the customer. Free, no sign-up.</p>
+<div class="grid">
+  <section class="card" id="calc"><h2>1. Your costs for this job</h2>
+    <div class="row"><div><label for="crew">Crew members</label><input id="crew" type="number" inputmode="decimal" min="0" step="1" value="1" data-err="Crew members: a whole number, at least 1."></div><div><label for="hours">Hours each</label><input id="hours" type="number" inputmode="decimal" min="0" step="any" value="1" data-err="Hours each: more than 0."></div></div>
+    <div class="row"><div><label for="rate">Labor cost per hour</label><input id="rate" type="number" inputmode="decimal" min="0" step="any" value="18" data-err="Labor cost per hour: 0 or more."></div><div><label for="travel">Travel cost</label><input id="travel" type="number" inputmode="decimal" min="0" step="any" value="8" data-err="Travel cost: 0 or more."></div></div>
+    <div class="row"><div><label for="supplies">Fuel and supplies per visit</label><input id="supplies" type="number" inputmode="decimal" min="0" step="any" value="4" data-err="Supplies: 0 or more."></div><div><label for="overhead">Equipment wear and overhead share</label><input id="overhead" type="number" inputmode="decimal" min="0" step="any" value="6" data-err="Overhead: 0 or more."></div></div>
+    <div class="row"><div><label for="margin">Target profit margin (%)</label><input id="margin" type="number" inputmode="decimal" min="0" step="any" value="35" data-err="Margin: from 0 to under 100%."></div>
+      <div><label for="round">Round the price up to</label><select id="round"><option value="0">exact cents</option><option value="1">nearest $1</option><option value="5" selected>nearest $5</option><option value="10">nearest $10</option></select></div></div>
+  </section>
+  <section class="card"><h2>2. Your price</h2><div id="result"></div>
+    
+  </section>
+</div>
+<section class="card" style="margin-top:20px" id="quote-form"><h2>3. Send the customer a quote</h2>
+  <div class="row"><div><label for="biz">Your business name</label><input id="biz" placeholder="Bright Home Cleaning"></div><div><label for="contact">Your phone or email (optional)</label><input id="contact"></div></div>
+  <div class="row"><div><label for="customer">Customer name</label><input id="customer"></div><div><label for="jobdesc">Job</label><input id="jobdesc" placeholder="Weekly mow, edge and blow, average yard"></div></div>
+  <div class="quote-card" aria-label="Printable quote">
+    <div class="qhead"><div><div class="qbiz" id="q-biz"></div><div class="small" id="q-contact"></div></div><div class="small">Quote · <span id="q-date"></span></div></div>
+    <p>Prepared for <strong id="q-customer"></strong></p>
+    <p><span id="q-job"></span></p>
+    <p class="qprice">Total: <span id="q-price"></span></p>
+    <p class="small">This quote is valid for 30 days. Price covers the work described above.</p>
+    <p class="small">Quote made with the free calculator at les2232.github.io/quote-tools/</p>
+  </div>
+  <p style="margin-top:14px"><button id="print" type="button">Print or save as PDF</button></p>
+</section>
+<section class="guide"><h2 style="margin-top:0">How to price a lawn care job</h2>
+<h2>Drive time is part of the job</h2><p>Travel between yards is paid time with no mowing. Put it in travel cost, or routes full of small yards will quietly lose money.</p>
+<h2>Quote per visit, bill per month if you like</h2><p>Price one visit from its costs, then multiply by visits in the month for a flat monthly bill. Customers like one number; you keep the per-visit margin.</p>
+<h2>Re-quote overgrown yards</h2><p>A first cut after weeks of growth can take twice as long. Quote it as its own job with more hours.</p>
+</section>
+<script src="../app.js"></script></main>
+<footer class="site"><span>Free tools for small service businesses. Your numbers stay in your browser; nothing is sent or stored on a server.</span><span>Example defaults are not market rates. Use your own costs.</span></footer>
+</body></html>
